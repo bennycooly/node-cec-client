@@ -1,3 +1,9 @@
+### Project Files ###
+# Build files
+build/
+
+### NodeJS ###
+
 # Logs
 logs
 *.log

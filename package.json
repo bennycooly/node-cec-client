@@ -1,0 +1,30 @@
+{
+  "name": "node-cec-client",
+  "version": "1.0.0",
+  "description": "CEC Client using libcec and node-addon-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennycooly/node-cec-client.git"
+  },
+  "keywords": [
+    "libcec",
+    "node-addon-api",
+    "node-cec-client"
+  ],
+  "author": "Ben Fu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bennycooly/node-cec-client/issues"
+  },
+  "homepage": "https://github.com/bennycooly/node-cec-client#readme",
+  "dependencies": {
+    "node-addon-api": "^0.5.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.7.0"
+  }
+}
