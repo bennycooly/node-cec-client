@@ -2,10 +2,10 @@
   "targets":
   [
     {
-      "target_name": "libcec",
+      "target_name": "cec-client",
       "sources":
       [
-        "src/addon/libcec.cc"
+        "src/addon/*.cc"
       ],
       "include_dirs":
       [
