@@ -1,6 +1,7 @@
 ### Project Files ###
 # Build files
 build/
+cec.dll
 
 ### Editor Files ###
 # VSCode

@@ -3,14 +3,15 @@
   [
     {
       "target_name": "cec-client",
+      # "type": "executable",
       "sources":
       [
-        "src/addon/*.cc"
+        "src/addon/**/*.cc"
       ],
       "include_dirs":
       [
         "<!@(node -p \"require('node-addon-api').include\")",
-        "src/libcec/include"
+        "libcec/include"
       ],
       "dependencies":
       [
@@ -28,15 +29,30 @@
             {
               "library_dirs":
               [
-                "src/libcec/build/windows"
+                "libcec/build/windows/amd64",
+                "libcec/build/windows/amd64/lib"
+              ],
+              "libraries":
+              [
+                "-lcec",
+                "-lp8-platform"
+                # "x86/cec.lib",
+                # "x86/lib/p8-platform.lib"
               ]
             },
+            "copies": [
+              {
+                "files": ["libcec/build/windows/amd64/cec.dll"],
+                "destination": "./"
+              }
+            ],
             "msbuild_toolset": "v141",
             "msvs_settings":
             {
               "VCCLCompilerTool":
               {
-                "ExceptionHandling": 1
+                "ExceptionHandling": 1,
+                "RuntimeLibrary": 2 # /MD
               }
             }
           }

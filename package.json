@@ -2,9 +2,11 @@
   "name": "node-cec-client",
   "version": "1.0.0",
   "description": "CEC Client using libcec and node-addon-api",
-  "main": "index.js",
+  "main": "src/lib/api.js",
+  "bin": "src/lib/cli.js",
   "scripts": {
-    "test": "jasmine"
+    "start": "node --napi-modules src/lib/cli.js",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/support/jasmine.json"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,7 @@
   },
   "homepage": "https://github.com/bennycooly/node-cec-client#readme",
   "dependencies": {
-    "node-addon-api": "^0.5.1"
+    "node-addon-api": "^0.6.2"
   },
   "devDependencies": {
     "jasmine": "^2.7.0"
